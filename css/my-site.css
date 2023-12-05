@@ -1,0 +1,8 @@
+.greetUser {
+	display: flex;
+	width: 30%;
+	height: 10rem;
+	background-color: blue;
+	color: white;
+
+}

@@ -1,0 +1,57 @@
+
+
+.game-buttons {
+	display: flex;
+	width: 100%;
+	height: 60vh;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: row;
+}
+
+.bug-warning {
+	width: 100%;
+	text-align: center;
+}
+
+.allgames-container {
+	width: 80%;
+	left: 10%;
+	justify-content: center;
+	background-color: white;
+	position: absolute;
+	top: 10rem;
+	height: 65%;
+	display: none;
+}
+
+.highscores-container{
+	display: flex;
+	width: 40%;
+}
+
+.show {
+	display: flex;
+}
+
+
+.running-game-button {
+	width: 4rem;
+	cursor: pointer;
+	height: 4rem;
+}
+.running-game-button img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.snake-game-button{
+	width: 4rem;
+	cursor: pointer;
+	height: 4rem;
+}
+
+.snake-game-button img {
+	max-width: 100%;
+	max-height: 100%;
+}

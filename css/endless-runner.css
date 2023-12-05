@@ -1,0 +1,82 @@
+:root {
+	--obstacle-animation-duration: 3s;
+	--circle-animation-duration: 2.9s;
+}
+
+.endless-container {
+	width: 95%;
+	height: 50%;
+	background-color: white;
+	position: relative;
+}
+
+.player {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	left: 50px;
+	transition: transform 0.1s ease; 
+	justify-content: end;
+}
+
+.player img {
+	max-height: 5rem;
+	max-width: 100%;
+}
+
+.obstacleTwo {
+	width: 30px;
+	height: 80px;
+	position: absolute;
+	bottom: 100px;
+	right: 0;
+	animation: obstacle-animation 2500ms linear infinite;
+	animation-delay: 1.5s;
+}
+
+.obstacleOne{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	animation: obstacle-animation 2500ms linear infinite;
+}
+
+.obstacleOne img,
+.obstacleTwo img {
+	max-width: 50px;
+	max-height: 80px;
+}
+
+.cherryOne, .cherryTwo {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 3rem;
+	animation: obstacle-animation 2200ms linear infinite;
+}
+
+.cherryImg {
+	max-width: 50px;
+	max-height: 80px;
+}
+
+.cherryOne {
+	animation-delay: 0.3s;
+}
+
+.cherryTwo {
+	animation-delay: 1.3s;
+}
+
+@keyframes obstacle-animation {
+	0% {
+		  right: 0;
+	}
+	100% {
+		  right: 100%;
+	}
+}
+
+.exit-game{
+	position: absolute;
+}

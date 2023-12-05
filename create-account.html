@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Katalogen</title>
+
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/reset-roots.css">
+	<link rel="stylesheet" href="css/media-query.css">
+	<link rel="stylesheet" href="css/create-account.css">
+</head>
+
+
+<body>
+	<div grid class="create-account-container">
+		<div class="create-account__header column--10 offset--1 offset-small--1">Opprett konto!</div>
+	
+		<div class="create-account__private-button column--4 offset--2 column-small--6">
+			Privat
+		</div>
+	
+		<div class="create-account__corporate-button column--4 column-small--6">
+			Bedrift
+		</div>
+
+		<form grid class="create-account__private-form column--12 column-small--12">
+		
+			<label for="navn" class="create-account__label column--6 offset--3 column-small--6 offset-small--3">Navn:</label>
+			<input type="text" id="namePrivate" name="name" class="create-account__input column--6 offset--3 column-small--6 offset-small--3" required>
+
+			<label for="epost" class="create-account__label column--6 offset--3 column-small--6 offset-small--3">Epost:</label>
+			<input type="email" id="emailPrivate" name="email" class="create-account__input column--6 offset--3 column-small--6 offset-small--3" required>
+
+			<label for="telefonnummer" class="create-account__label column--6 offset--3 column-small--6 offset-small--3">Telefonnummer:</label>
+			<input type="tel" id="phoneNumberPrivate" name="phoneNumber" class="create-account__input column--6 offset--3 column-small--6 offset-small--3" required>
+
+			<label for="fodselsdato" class="create-account__label column--6 offset--3 column-small--6 offset-small--3">Fødselsdato:</label>
+			<input type="date" id="birthdatePrivate" name="birthdate" class="create-account__input column--6 offset--3 column-small--6 offset-small--3" required>
+
+			<!-- Gender Dropdown -->
+			<div class="column--2 offset--5 column-small--4 offset-small--4">
+				<label for="gender" class="create-account__label">Gender:</label>
+				<select id="genderPrivate" name="gender" class="create-account__dropbtn">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+			</div>
+		</form>
+
+		<div class="create-account__terms-container column--12 column-small--12">
+			<div class="create-account__terms">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis urna.Phasellus in risus at mi sollicitudin posuere.</p>
+			</div>
+		</div>
+
+		<div class="create-account__terms-header column--12 column-small--12">
+			<h3>Kryss av for og godta vilkårene</h3>
+			<input type="checkbox" class="create-account__checkbox" required>
+		</div>
+
+		<button class="create-account__submit-button column--4 offset--4 column-small--6 offset-small--3">
+			Opprett!
+		</button>
+
+		<button class="create-account__submit-button2 column--4 offset--4 column-small--6 offset-small--3">
+			check data!
+		</button>
+	</div>
+
+	<!--logo-->
+	<button class="header2">
+		<a href="C:\Morten\Sites\2.0 Kristiania Hovedprosjekt\main-page.html" target="_self">
+			 <img src="assets/allwin-logo-png-800x800px.png" >
+		</a>
+  </button>
+
+
+
+
+	<script src="js/account__create.js"></script>
+
+</body>
+</html>

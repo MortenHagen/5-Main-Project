@@ -1,0 +1,137 @@
+[grid] {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 0.5rem;
+	margin: 0 auto;
+	width: 100%;
+}
+
+[grid4] {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	gap: var(--font-size-small);
+	margin: 0 auto;
+	width: 100%;
+}
+
+
+.header {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.header2 {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.header img {
+	height: 18rem;
+	margin: 0 auto;
+}
+
+.header2 img {
+	height: 10rem;
+	margin: 0 auto;
+}
+
+
+.main-sticker__link {
+	color: var(--primary-color);
+}
+
+.main-buttons {
+	display: inline-block;
+	padding: 5px 0px;
+	background-color: #014288;
+	color: white;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 1rem;
+	font-weight: 700;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.main-buttons:hover {
+	transform: scale(1.1);
+	background-color: #015BAB;
+}
+
+.main-buttons::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 3px solid #00FFFF;
+	border-radius: 5px;
+	animation: border-animation 3s infinite;
+	z-index: -1;
+}
+
+@keyframes border-animation {
+	0% {
+		 transform: scale(1);
+	}
+	50% {
+		 transform: scale(1.2);
+		 opacity: 0;
+	}
+	100% {
+		 transform: scale(1);
+	}
+}
+
+
+.main-sticker {
+	display: flex;
+	height: 10rem;
+	border: 1px solid black;
+	border-radius: 10px;
+	position: relative;
+	justify-content: center;
+	overflow: hidden;
+	
+}
+.main-sticker:hover {
+	box-shadow: 1px 1px 10px 0px black;
+}
+
+.main-sticker img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.main-sticker__button {
+	display: flex;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.842);
+	position: absolute;
+	flex-direction: column;
+	bottom: 0;
+	justify-content: center;
+	height: 3rem;
+	width: 100%;
+	transition: height 500ms ease;
+	color: var(--primary-color);
+	font-weight: bold;
+	overflow: hidden;
+	font-size: 1.3rem;
+}
+
+.main-sticker__button:hover {
+	height: 80%;
+}
+
+.main-sticker__button p {
+	color: black;
+	font-size: 0.9rem;
+}
