@@ -1,38 +1,38 @@
-function createlevelTwoMonster() {
-	const levelTwoMonster = document.createElement('div');
-	levelTwoMonster.className = 'super-monster';
-	spaceMonstersContainer.appendChild(levelTwoMonster);
-	const levelTwoMonsterImg = document.createElement('img');
-	levelTwoMonsterImg.setAttribute('src', 'assets\games\space-impact\level-three.jpg');
-	levelTwoMonster.appendChild(levelTwoMonsterImg);
+function createlevelThreeMonster() {
+	const levelThreeMonster = document.createElement('div');
+	levelThreeMonster.className = 'super-monster';
+	spaceMonstersContainer.appendChild(levelThreeMonster);
+	const levelThreeMonsterImg = document.createElement('img');
+	levelThreeMonsterImg.setAttribute('src', 'assets\games\space-impact\level-three.jpg');
+	levelThreeMonster.appendChild(levelThreeMonsterImg);
 
-	const levelTwoMonsterPosition = Math.random() * (document.querySelector('.gamediv').offsetWidth - 50);
+	const levelThreeMonsterPosition = Math.random() * (document.querySelector('.gamediv').offsetWidth - 50);
 
-	levelTwoMonster.style.left = levelTwoMonsterPosition + 'px';
+	levelThreeMonster.style.left = levelThreeMonsterPosition + 'px';
 
-	const levelTwoMonsterInterval = setInterval(function () {
-		 const levelTwoMonsterTop = levelTwoMonster.offsetTop + spaceMonsterSpeed;
+	const levelThreeMonsterInterval = setInterval(function () {
+		 const levelThreeMonsterTop = levelThreeMonster.offsetTop + spaceMonsterSpeed;
 
-		 if (levelTwoMonsterTop <= document.querySelector('.gamediv').offsetHeight) {
-			levelTwoMonster.style.top = levelTwoMonsterTop + 'px';
+		 if (levelThreeMonsterTop <= document.querySelector('.gamediv').offsetHeight) {
+			levelThreeMonster.style.top = levelThreeMonsterTop + 'px';
 			  handleCollisions(); // Check for collisions on each space monster movement
 		 } else {
-			  clearInterval(levelTwoMonsterInterval);
-			  spaceMonstersContainer.removeChild(levelTwoMonster);
+			  clearInterval(levelThreeMonsterInterval);
+			  spaceMonstersContainer.removeChild(levelThreeMonster);
 		 }
 	}, 80);
  }
 
  
- function levelTwoMonsterBulletCollision(bullet, levelTwoMonster) {
+ function levelThreeMonsterBulletCollision(bullet, levelThreeMonster) {
 	const bulletRect = bullet.getBoundingClientRect();
-	const levelTwoMonsterRect = levelTwoMonster.getBoundingClientRect();
+	const levelThreeMonsterRect = levelThreeMonster.getBoundingClientRect();
 
 	if (
-		bulletRect.left < levelTwoMonsterRect.right &&
-		bulletRect.right > levelTwoMonsterRect.left &&
-		bulletRect.top < levelTwoMonsterRect.bottom &&
-		bulletRect.bottom > levelTwoMonsterRect.top
+		bulletRect.left < levelThreeMonsterRect.right &&
+		bulletRect.right > levelThreeMonsterRect.left &&
+		bulletRect.top < levelThreeMonsterRect.bottom &&
+		bulletRect.bottom > levelThreeMonsterRect.top
 	) {
 		collisionCounter++;
 		bullet.remove();
@@ -44,16 +44,16 @@ function createlevelTwoMonster() {
 
 function handleCollisions() {
 	const bullets = document.querySelectorAll('.bullet');
-	const levelTwoMonsters = document.querySelectorAll('.level-Two-monster');
+	const levelThreeMonsters = document.querySelectorAll('.level-Two-monster');
 
 	bullets.forEach((bullet) => {
-		levelTwoMonsters.forEach((levelTwoMonster) => {
-				if (levelTwoMonsterBulletCollision(bullet, levelTwoMonster)) {
-					levelTwoMonster.collisionCount = (levelTwoMonster.collisionCount || 0) + 1;
+		levelThreeMonsters.forEach((levelThreeMonster) => {
+				if (levelThreeMonsterBulletCollision(bullet, levelThreeMonster)) {
+					levelThreeMonster.collisionCount = (levelThreeMonster.collisionCount || 0) + 1;
 
 					if (collisionCounter === 1) {
 						bulletsContainer.removeChild(bullet);
-						spaceMonstersContainer.removeChild(levelTwoMonster);
+						spaceMonstersContainer.removeChild(levelThreeMonster);
 						updateScore(2); // Increase the score by 1
 						collisionCounter = 0;
 					}
