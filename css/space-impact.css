@@ -4,7 +4,6 @@
 	width: 600px;
 	height: 90vh;
 	position: relative;
-	overflow: hidden;
 }
 
 .spacecraft {
@@ -18,30 +17,30 @@
 	height: 100%;
 }
 
-.level-one-monster {
+.level-one-monsters {
 	height: 5rem;
 	position: absolute;
 }
 
-.level-one-monster img {
+.level-one-monsters img {
 	height: 100%;
 }
 
-.levelTwo-monster {
+.level-two-monsters {
 	height: 8rem;
 	position: absolute;
 }
 
-.levelTwo-monster img {
+.level-two-monsters img {
 	height: 100%;
 }
 
-.level-two-monster {
+.level-three-monsters {
 	height: 8rem;
 	position: absolute;
 }
 
-.level-two-monster img {
+.level-three-monsters img {
 	height: 100%;
 }
 
