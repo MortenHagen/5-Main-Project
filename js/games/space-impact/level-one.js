@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		levelOneMonstersContainer.appendChild(levelOneMonster);
 
 		const spaceImglevelOne = document.createElement('img');
-spaceImglevelOne.setAttribute('src', 'C:/Morten/Sites/5-Main Project/assets/games/space-impact/space-monster.jpg');
+		spaceImglevelOne.setAttribute('src', 'C:/Morten/Sites/5-Main Project/assets/games/space-impact/space-monster.jpg');
 		levelOneMonster.appendChild(spaceImglevelOne);
 
 		const levelOneMonsterPosition = Math.random() * (document.querySelector('.gamediv').offsetWidth - 50);
@@ -79,7 +79,7 @@ spaceImglevelOne.setAttribute('src', 'C:/Morten/Sites/5-Main Project/assets/game
 			 if (levelOneMonsterTop <= document.querySelector('.gamediv').offsetHeight) {
 				levelOneMonster.style.top = levelOneMonsterTop + 'px';
 			 } else {
-				  level-one-levelOneMonstersContainer.removeChild(levelOneMonster);
+				  levelOneMonstersContainer.removeChild(levelOneMonster);
 			 }
 		}, 50);
 	}
@@ -166,7 +166,7 @@ spaceImglevelOne.setAttribute('src', 'C:/Morten/Sites/5-Main Project/assets/game
 		} 
 	});
 
-	setInterval(shootBullet, 250)
+	
 	function levelOneMonsterBulletCollision(bullet, levelOneMonster) {
 		const levelOneBulletRect = bullet.getBoundingClientRect();
 		const levelOneMonsterRect = levelOneMonster.getBoundingClientRect();
@@ -196,7 +196,7 @@ spaceImglevelOne.setAttribute('src', 'C:/Morten/Sites/5-Main Project/assets/game
 			levelOneMonsters.forEach((levelOneMonster) => {
 				if (levelOneMonsterBulletCollision(bullet, levelOneMonster)) {
 					bulletsContainer.removeChild(bullet);
-					level-one-levelOneMonstersContainer.removeChild(levelOneMonster);
+					levelOneMonstersContainer.removeChild(levelOneMonster);
 					updateScore(1); // Increase the score by 1
 				}
 		});
@@ -236,6 +236,7 @@ spaceImglevelOne.setAttribute('src', 'C:/Morten/Sites/5-Main Project/assets/game
 		if (
 			levelTwoBulletRect.right > levelTwoMonsterRect.left &&
 			levelTwoBulletRect.top < levelTwoMonsterRect.bottom &&
+			levelTwoBulletRect.left > levelTwoMonsterRect.right &&
 			levelTwoBulletRect.bottom > levelTwoMonsterRect.top
 		) {
 			levelTwoCollisionCounter++;
@@ -262,4 +263,5 @@ spaceImglevelOne.setAttribute('src', 'C:/Morten/Sites/5-Main Project/assets/game
 		return levelThreeCollisionCounter;
 	}	 
 
+	setInterval(shootBullet, 250)
 });
