@@ -52,7 +52,7 @@ function updateScoreDisplay() {
 
 function handleGameEnd() {
     clearInterval(gameInterval);
-    const result = confirm("Game Over! Din superduper-score: " + score + "\nSkal ikke ta'så spille en gang til a'?");
+    const result = confirm("Game Over! Din levelTwoduper-score: " + score + "\nSkal ikke ta'så spille en gang til a'?");
     
     // Retrieve existing high scores from local storage
     let highScores = JSON.parse(localStorage.getItem('Highscores')) || [];

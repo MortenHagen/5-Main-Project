@@ -18,21 +18,21 @@
 	height: 100%;
 }
 
-.space-monster {
+.level-one-monster {
 	height: 5rem;
 	position: absolute;
 }
 
-.space-monster img {
+.level-one-monster img {
 	height: 100%;
 }
 
-.super-monster {
+.levelTwo-monster {
 	height: 8rem;
 	position: absolute;
 }
 
-.super-monster img {
+.levelTwo-monster img {
 	height: 100%;
 }
 
