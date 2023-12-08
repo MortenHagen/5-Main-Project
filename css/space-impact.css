@@ -1,0 +1,54 @@
+.gamediv {
+	border: 1px solid #000;
+	display: block;
+	width: 600px;
+	height: 90vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.spacecraft {
+	height: 5rem;
+	position: absolute;
+	bottom: 0;  /* Set the bottom position to 0 */
+	left: 255px;
+ }
+
+.spacecraft img {
+	height: 100%;
+}
+
+.space-monster {
+	height: 5rem;
+	position: absolute;
+}
+
+.space-monster img {
+	height: 100%;
+}
+
+.super-monster {
+	height: 8rem;
+	position: absolute;
+}
+
+.super-monster img {
+	height: 100%;
+}
+
+.level-two-monster {
+	height: 8rem;
+	position: absolute;
+}
+
+.level-two-monster img {
+	height: 100%;
+}
+
+.bullet {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background-color: red;
+	z-index: 100;
+}

@@ -12,18 +12,28 @@
 </head>
 
 
-<body>
+<body grid>
 
 	<!--logo-->
-	<button class="header2">
-		<a href="C:\Morten\Sites\2.0 Kristiania Hovedprosjekt\main-page.html" target="_self">
+
+	<button class="header2 column--2 offset--1">
+		<a href="main-page.html" target="_self">
 			 <img src="assets/allwin-logo-png-800x800px.png" >
 		</a>
-  </button>
+	</button>
 
-  <div class="greetUser">
+	<div class="profile-picture-container column--1 offset--5"></div>
 
-  </div>
+
+	<div class="upload-picture__container column--3 offset--1">
+		<p>Upload a profile picture</p>
+		<input type="text" placeholder="Insert https link to set picture" class="upload-picture__input">
+		<button class="upload-picture__button">Upload link</button>
+	</div>
+
+	<div class="greetUser column--3 offset--4"></div>
+</div>
+
 
 	<script src="js/my-site.js"></script>
 
