@@ -17,30 +17,30 @@
 	height: 100%;
 }
 
-.level-one-monsters {
+.level-one-monster {
 	height: 5rem;
 	position: absolute;
 }
 
-.level-one-monsters img {
+.level-one-monster img {
 	height: 100%;
 }
 
-.level-two-monsters {
+.level-two-monster {
 	height: 8rem;
 	position: absolute;
 }
 
-.level-two-monsters img {
+.level-two-monster img {
 	height: 100%;
 }
 
-.level-three-monsters {
+.level-three-monster {
 	height: 8rem;
 	position: absolute;
 }
 
-.level-three-monsters img {
+.level-three-monster img {
 	height: 100%;
 }
 
