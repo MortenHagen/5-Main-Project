@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			stickerAttribute: 'pink-jacket',
 		},
 	];
+
+
 	const stickerContainer = document.createElement('div');
 	stickerContainer.classList.add('catalog__sticker-container', 'column--12', 'column-small--12');
-
-
 
 // Creating the stickers
 	newSticker.forEach((sticker) => {
