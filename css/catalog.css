@@ -22,6 +22,9 @@
 .catalog__nav-button {
 	position: relative;
 	width: 10%;
+	color: white;
+	font-size:large;
+	font-weight: 900;
 }
 
 .catalog__nav-dropdown {
@@ -45,8 +48,15 @@
 	height: 1.5rem;
 }
 
+.result-container {
+	margin-top: 20px;
+}
 
-
+.result-item {
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin-bottom: 10px;
+}
 .catalog__input-bar{
 	position: relative;
 	width: 25%;

@@ -395,21 +395,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-
-	// Open navigation dropdowns
-	const catalogNavButtons = document.querySelectorAll('.catalog__nav-button')
-
-	function openDropdown(event) {
-		currentNavButton = event.currentTarget
-		currentChild = currentNavButton.firstElementChild;
-		currentChild.classList.add('show')
-		
-	}
-	catalogNavButtons.forEach(function(catalogNavButton) {
-		catalogNavButton.addEventListener('click', openDropdown);
-	});
-
-	// close navigation dropdowns
 	const exitButtonsFlex = document.querySelectorAll('.exit-button-flex');
 
 	function closeDropdown(event) {
