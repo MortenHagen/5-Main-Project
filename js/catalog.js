@@ -141,8 +141,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	];
 
-
-
 // Creating the productpage and it's functions/logic within.
 	const mainStickers = document.querySelectorAll('.main-sticker');
 	function filterStickers(event) {
@@ -359,8 +357,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	};
-
-
 
 // Event listener for creating the spesific productpage for each spesific sticker.
 	mainStickers.forEach(function(mainSticker) {

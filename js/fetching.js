@@ -2,6 +2,7 @@ let countryName = "";
 let resultArray = [];
 let stickerContainer;
 let category = "";
+let apiData = {}; // New variable to store fetched API data
 
 const apiButtons = document.querySelectorAll('.api-button');
 
@@ -9,8 +10,13 @@ apiButtons.forEach(button => {
     button.addEventListener('click', function (e) {
         category = e.target.textContent.trim();
         console.log(category);
-		resultArray = []
-        getData();
+        // Check if data for the selected category is already fetched
+        if (!apiData[category]) {
+            getData();
+        } else {
+            // Use the stored data directly if available
+            renderDatas(apiData[category]);
+        }
     });
 });
 
@@ -19,7 +25,10 @@ function getData() {
 
     fetch(url)
         .then(response => response.json())
-        .then(data => renderDatas(data))
+        .then(data => {
+            apiData[category] = data; // Store the fetched data
+            renderDatas(data);
+        })
         .catch(error => {
             console.error('Error fetching data:', error);
         });
@@ -28,7 +37,7 @@ function getData() {
 function renderDatas(data) {
     console.log(data);
     resultArray = [];
-	if (stickerContainer) {
+    if (stickerContainer) {
         stickerContainer.remove();
     }
     data.results.forEach(resultObject => {
@@ -52,7 +61,7 @@ function renderDatas(data) {
 
 let inputLetters = document.getElementById("searchInput")
 inputLetters.addEventListener('input', () => {
-    getData();
+    displayResults(); // Just filter and display results based on the stored data
 });
 
 function displayResults() {
@@ -109,6 +118,6 @@ function displayResults() {
         stickerContainer.appendChild(mainSticker);
     });
 
-    document.body.appendChild(stickerContainer);
+    resultContainer.appendChild(stickerContainer);
 
 }
