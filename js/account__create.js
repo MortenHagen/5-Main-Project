@@ -35,3 +35,9 @@ function displatStoredData() {
 }
 
 checkDataStored.addEventListener('click', displatStoredData);
+
+array = [
+	{
+		
+	}
+]

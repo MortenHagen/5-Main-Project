@@ -75,8 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 	document.body.appendChild(stickerContainer);
 
-
-
 // All the product-page information
 	const newProductPages = [
 		{
@@ -363,8 +361,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	mainSticker.addEventListener('click', filterStickers);
 	});
 	
-
-
 // Search-bar hide and show icon+ log whats written by enter og click on search button
 
 	const catalogInput = document.querySelector('.catalog__input-bar input');
@@ -390,7 +386,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		console.log(catalogInput.value)		
 	})
 
-
 	const exitButtonsFlex = document.querySelectorAll('.exit-button-flex');
 
 	function closeDropdown(event) {
@@ -403,8 +398,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	exitButtonsFlex.forEach(function(exitButtonFlex) {
 		exitButtonFlex.addEventListener('click', closeDropdown)
 	})
-
-
-
-
 })

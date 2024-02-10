@@ -1,0 +1,20 @@
+.philosophy, .history, .dreams{
+    display: none;
+    height: max-content;
+    color: white;
+    min-height: 3rem;
+    background: rgb(119, 143, 209);
+    margin-top: 1rem;
+}
+
+.show {
+    display: none;
+}
+
+
+
+.blogg-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

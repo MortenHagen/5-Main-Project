@@ -30,7 +30,7 @@ function getData() {
             renderDatas(data);
         })
         .catch(error => {
-            console.error('Error fetching data:', error);
+            console.error('Error fetching dataaaa:', error);
         });
 }
 
