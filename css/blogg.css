@@ -57,12 +57,18 @@
 	
 }
 .blog-post__text {
-	list-style: none;
-	text-align: center;
-	border-radius: 5px;
-	font-size: 1rem;
-	max-height: max-content;
-	font-weight: 400;
-	height: max-content;
-	
+    list-style: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    max-height: max-content;
+    font-weight: 400;
+    overflow: auto;
+    height: 15rem;   
+}
+
+.new-philosophy-post, .new-history-post, .new-dreams-post, .new-fun-post {
+	display: flex;
+	flex-direction: column;
+	width: 10%;
 }
