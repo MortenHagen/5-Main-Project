@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			section.style.display = displayAttr === menuToShow ? 'block' : 'none';
 			updateDisplay(menuToShow)
 		});
-	}
+	};
 
 
 // Adding the new posts
@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			inputField.value = '';
 			textareaField.value = '';
 			updateDisplay(displayType);
-		}
-	}
+		};
+	};
 	
 
 // Submit buttons logic
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			displayPosts(dreamsArray);
 		} else if (sectionName === 'fun') {
 			displayPosts(funArray);
-		}
+		};
 	};
 
 
@@ -121,8 +121,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			blogPostText.textContent = item.textarea; // Display the textarea value
 			blogPost.appendChild(blogPostText);
 		});
-	}
-	
+	};
+
 		
 // text-area logic
 	philosophyTextareaField.addEventListener('focus', function() {
