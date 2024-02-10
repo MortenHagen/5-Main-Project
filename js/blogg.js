@@ -1,4 +1,6 @@
-    document.addEventListener("DOMContentLoaded", function() {
+
+
+document.addEventListener("DOMContentLoaded", function() {
 
         const buttons = document.querySelectorAll('.blogg-menu button');
         const sections = document.querySelectorAll('[data-display]');
@@ -30,41 +32,53 @@
 
     // Adding the new posts
 
-        const philosophySubmitButton = document.querySelector('.new-philosophy-post button');
-        const philosophyInputField = document.querySelector('.new-philosophy-post textarea');
+		const philosophyTextareaField = document.querySelector('.new-philosophy-post textarea');
+		const philosophySubmitButton = document.querySelector('.new-philosophy-post button');
+        const philosophyInputField = document.querySelector('.new-philosophy-post input');
+
+        const historyTextareaField = document.querySelector('.new-history-post textarea');
         const historySubmitButton = document.querySelector('.new-history-post button');
         const historyInputField = document.querySelector('.new-history-post input');
+
+        const dreamsTextareaField = document.querySelector('.new-dreams-post textarea');
         const dreamsSubmitButton = document.querySelector('.new-dreams-post button');
         const dreamsInputField = document.querySelector('.new-dreams-post input');
+
+        const funTextareaField = document.querySelector('.new-fun-post textarea');
         const funSubmitButton = document.querySelector('.new-fun-post button');
         const funInputField = document.querySelector('.new-fun-post input');
+		
         const displayContainer = document.querySelector('.display-container');
 
-        function handleSubmit(event, inputField, storageKey, dataArray, displayType) {
-            event.preventDefault();
-            const inputValue = inputField.value.trim();
-            if (inputValue !== '') {
-                dataArray.push(inputValue);
-                localStorage.setItem(storageKey, JSON.stringify(dataArray));
-                inputField.value = '';
-                updateDisplay(displayType);
-            }
-        }
+		function handleSubmit(event, inputField, textareaField, storageKey, dataArray, displayType) {
+			event.preventDefault();
+			const inputValue = inputField.value.trim();
+			const textareaValue = textareaField.value.trim();
+			if (inputValue !== '' && textareaValue !== '') {
+				dataArray.push({ input: inputValue, textarea: textareaValue });
+				localStorage.setItem(storageKey, JSON.stringify(dataArray));
+				inputField.value = '';
+				textareaField.value = '';
+				updateDisplay(displayType);
+			}
+		}
+		
+		
         
         philosophySubmitButton.addEventListener('click', function(event) {
-            handleSubmit(event, philosophyInputField, 'philosophyArray', philosophyArray, 'philosophy');
+            handleSubmit(event, philosophyInputField, philosophyTextareaField, 'philosophyArray', philosophyArray, 'philosophy');
         });
         
         historySubmitButton.addEventListener('click', function(event) {
-            handleSubmit(event, historyInputField, 'historyArray', historyArray, 'history');
+            handleSubmit(event, historyInputField, historyTextareaField, 'historyArray', historyArray, 'history');
         });
         
         dreamsSubmitButton.addEventListener('click', function(event) {
-            handleSubmit(event, dreamsInputField, 'dreamsArray', dreamsArray, 'dreams');
+            handleSubmit(event, dreamsInputField, dreamsTextareaField, 'dreamsArray', dreamsArray, 'dreams');
         });
 
         funSubmitButton.addEventListener('click', function(event) {
-            handleSubmit(event, funInputField, 'funArray', funArray, 'fun');
+            handleSubmit(event, funInputField, funTextareaField, 'funArray', funArray, 'fun');
         });
         
         function updateDisplay(sectionName) {
@@ -80,32 +94,41 @@
         };
 
 // Display the blogposts
-        function displayPosts(array) {
-            displayContainer.innerHTML = '';
-            array.forEach(item => {
-                const blogPost = document.createElement('div');
-                blogPost.classList.add('blog-post', 'column--8', 'offset--2');
-                displayContainer.appendChild(blogPost);
+function displayPosts(array) {
+    displayContainer.innerHTML = '';
+    array.forEach(item => {
+        const blogPost = document.createElement('div');
+        blogPost.classList.add('blog-post', 'column--8', 'offset--2');
+        displayContainer.appendChild(blogPost);
 
-                const blogPostHeader = document.createElement('h2')
-                blogPostHeader.classList.add('blog-post__header')
-                blogPostHeader.textContent = item;
-                blogPost.appendChild(blogPostHeader)
+        const timestamp = new Date().toLocaleString(); // Get current timestamp
 
-                const blogPostText = document.createElement('li')
-                blogPostText.classList.add('blog-post__text')
-                blogPostText.textContent = item;
-                blogPost.appendChild(blogPostText)
-            });
-        }
+        const blogPostHeader = document.createElement('div');
+        blogPostHeader.classList.add('blog-post__header');
+        blogPostHeader.textContent = item.input; // Display the input value and timestamp
+        blogPost.appendChild(blogPostHeader);
+
+		const blogPostTime = document.createElement('div');
+		blogPostTime.classList.add('blog-post__timestamp');
+		blogPostTime.textContent = timestamp
+		blogPost.appendChild(blogPostTime)
+
+        const blogPostText = document.createElement('p');
+        blogPostText.classList.add('blog-post__text');
+        blogPostText.textContent = item.textarea; // Display the textarea value
+        blogPost.appendChild(blogPostText);
+    });
+}
+
+
         
 // text-area logic
-        philosophyInputField.addEventListener('focus', function() {
+        philosophyTextareaField.addEventListener('focus', function() {
             this.style.width = '50rem';
             this.style.height = '30rem';
         });
         
-        philosophyInputField.addEventListener('blur', function() {
+        philosophyTextareaField.addEventListener('blur', function() {
             this.style.width = ''; 
             this.style.height = '';
         });
