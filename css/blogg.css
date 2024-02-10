@@ -1,19 +1,19 @@
 .philosophy, .history, .dreams, .fun {
-    display: none;
-    height: max-content;
-    min-height: 3rem;
-    margin-top: 1rem;
+	display: none;
+	height: max-content;
+	min-height: 3rem;
+	margin-top: 1rem;
 }
 
 .show {
-    display: none;
+	display: none;
 }
 
 .blogg-menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	gap: 1rem;
 }
 
 .blogg-menu button {
@@ -29,41 +29,40 @@
 }
 
 .blog-submit-button {
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 5px;
-    font-size: 1.5rem;
+	background-color: var(--primary-color);
+	color: white;
+	border-radius: 5px;
+	font-size: 1.5rem;
 }
 
 .blog-post{
-    display: flex;
-    box-shadow: 2px 1px 3px 0px;
-    border-radius: 5px;
-    max-height: max-content;
-    flex-direction: column;
+	display: flex;
+	box-shadow: 2px 1px 3px 0px;
+	border-radius: 5px;
+	max-height: max-content;
+	flex-direction: column;
 }
 
 .blog-post:hover{
-    box-shadow: 3px 2px 5px 0px;
+	box-shadow: 3px 2px 5px 0px;
 }
 
 .blog-post__header {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    background: var(--background-gradient);
-    max-width: 100%;
-    border-bottom: 1px solid black;
-    
+	font-size: 2.5rem;
+	font-weight: 700;
+	text-align: center;
+	background: var(--background-gradient);
+	max-width: 100%;
+	border-bottom: 1px solid black;
+	
 }
 .blog-post__text {
-    list-style: none;
-    text-align: center;
-    border-radius: 5px;
-    font-size: 1rem;
-    max-height: max-content;
-    font-weight: 400;
-    overflow: auto;
-    height: 15rem;
-    
+	list-style: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 1rem;
+	max-height: max-content;
+	font-weight: 400;
+	height: max-content;
+	
 }
