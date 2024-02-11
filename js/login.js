@@ -36,3 +36,4 @@ createBtn.addEventListener('click', function() {
     alert('Please enter a username and password.');
   }
 });
+
