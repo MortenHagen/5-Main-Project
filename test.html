@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Input and Display</title>
+<style>
+  #display {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+  <div>
+    <label for="textInput">Enter Text:</label>
+    <input type="text" id="textInput">
+    <button onclick="addText()">Add Text</button>
+  </div>
+  <ul id="display"></ul>
+
+  <script>
+    // Array to store user input text
+    let textArray = [];
+
+    // Function to add text to the array and display it
+    function addText() {
+      const userInput = document.getElementById('textInput').value;
+      textArray.push(userInput);
+      displayText();
+    }
+
+    // Function to display text from the array
+    function displayText() {
+      const displayList = document.getElementById('display');
+      displayList.innerHTML = ''; // Clear previous content
+
+      textArray.forEach(text => {
+        // Split text into paragraphs
+        const paragraphs = text.split('\n');
+        paragraphs.forEach(paragraph => {
+          // Create list item for each paragraph
+          const li = document.createElement('li');
+          li.textContent = paragraph;
+          displayList.appendChild(li);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
