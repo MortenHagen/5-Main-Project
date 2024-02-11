@@ -19,6 +19,7 @@ html {
 }
 
 :root {
+	--border-radius: 5px;
 
 	--font-size-small: 0.7rem;
 	--font-size-medium: 1.5rem;

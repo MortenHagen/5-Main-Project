@@ -17,7 +17,7 @@
 
 .snake {
 	background-color: #4caf50;
-	border-radius: 5px;
+	border-radius: var(--border-radius);
 	width: 100%; 
 	transition: 2s ease; 
 	height: 100%;

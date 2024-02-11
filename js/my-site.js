@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function(){
     
     if (!isLoggedIn()) {
       // If the user is not logged in or alert hasn't happened, redirect to the login page
-      window.location.href = 'login.html';
       return;
     }
     

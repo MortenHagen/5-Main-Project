@@ -20,7 +20,7 @@
 	padding: 5px 0px;
 	background-color: #014288;
 	color: white;
-	border-radius: 5px;
+	border-radius: var(--border-radius);
 	width: 100%;
 	font-size: 1.5rem;
 	font-weight: 400;
@@ -31,14 +31,14 @@
 .blog-submit-button {
 	background-color: var(--primary-color);
 	color: white;
-	border-radius: 5px;
+	border-radius: var(--border-radius);
 	font-size: 1.5rem;
 }
 
 .blog-post{
 	display: flex;
 	box-shadow: 2px 1px 3px 0px;
-	border-radius: 5px;
+	border-radius: var(--border-radius);
 	max-height: max-content;
 	flex-direction: column;
 }
@@ -59,7 +59,7 @@
 .blog-post__text {
     list-style: none;
     text-align: center;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     font-size: 1rem;
     max-height: max-content;
     font-weight: 400;
@@ -76,7 +76,7 @@
 
 .html-posts-container a {
 	border: 1px solid black;
-	border-radius: 5px;
+	border-radius: var(--border-radius);
 	margin: 3px;
 	padding: 3px;
 	background: var(--scale-color);
