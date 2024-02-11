@@ -1,0 +1,12 @@
+.html-post{
+    display: flex;
+    width: 65vw;
+    height: max-content;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.html-post li {
+    margin: 0.5rem;
+    list-style: none;
+}
