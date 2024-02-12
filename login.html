@@ -4,8 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <link rel="stylesheet" href="css/reset-roots.css">
+  <link rel="stylesheet" href="css/login.css">
+
 </head>
-<body>
+<body grid>
+
+	<button class="header2 column--2 offset--1">
+		<a href="main-page.html" target="_self">
+			 <img src="assets/allwin-logo-png-800x800px.png" >
+		</a>
+	</button>
+  
+  <div class="column--12">
     <h2>Login</h2>
     <form id="loginForm">
       <label for="username">Username:</label>
@@ -15,6 +26,8 @@
       <button type="submit" id="loginBtn">Login</button>
       <button type="button" id="createBtn">Create Account</button>
     </form>
+  </div>
+
 
   <script src="js/login.js"></script>
   <!-- <script src="js/my-site.js"></script> -->

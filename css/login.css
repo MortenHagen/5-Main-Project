@@ -1,0 +1,6 @@
+#loginForm button{
+    border: 1px solid black;
+	background: var(--scale-color);
+	border-radius: var(--border-radius);
+	padding: var(--border-radius);
+}
