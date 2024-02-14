@@ -367,21 +367,21 @@ document.addEventListener('DOMContentLoaded', function () {
 	const catalogImg = document.querySelector('.catalog__input-bar img');
 	const inputSearchButton = document.querySelector('.catalog__input-button');
 
-	// Hide search icon
+// Hide search icon
 	catalogInput.addEventListener('focus', function() {
 			catalogImg.style.display = 'none';
 	});
-	// Show Search icon
+// Show Search icon
 	catalogInput.addEventListener('blur', function() {
 			catalogImg.style.display = 'block';
 	});
-	// Log text by keydown Enter
+// Log text by keydown Enter
 	catalogInput.addEventListener('keydown', function(event) {
 		if (event.key === 'Enter') {
 			console.log(catalogInput.value);
 		}
 	})
-	// Log text by clicking search-button
+// Log text by clicking search-button
 	inputSearchButton.addEventListener('click', function() {
 		console.log(catalogInput.value)		
 	})

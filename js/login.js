@@ -9,13 +9,13 @@ loginForm.addEventListener('submit', function(event) {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
   
-  const storedPassword = localStorage.getItem(username); // Assuming username is the key
+  const storedPassword = localStorage.getItem(username);
   
-  if (storedPassword === password) { // Fixed the comparison
+  if (storedPassword === password) {
     alert('Login successful!');
     alertHappened = true;
-    localStorage.setItem('alertHappened', 'true'); // Update alertHappened in localStorage
-    window.location.href = 'my-site.html'; // Redirect to my-site.html upon successful login
+    localStorage.setItem('alertHappened', 'true'); 
+    window.location.href = 'my-site.html';
   } else {
     alert('Invalid username or password');
   }
